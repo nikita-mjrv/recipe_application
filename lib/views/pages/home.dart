@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_application/views/widgets/recipe_card.dart';
-import 'package:recipe_application/views/widgets/recipe_detail_page.dart';
+import 'package:recipe_application/views/pages/recipe_detail_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:recipe_application/views/home.dart';
-import 'package:recipe_application/views/widgets/person_page.dart';
+import 'package:recipe_application/views/pages/home.dart';
+import 'package:recipe_application/views/pages/person_page.dart';
 
 class FirstPage extends StatefulWidget {
   @override
@@ -15,9 +15,6 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Hi'),
-      // ),
       body: PageView(
         controller: _pageController,
         onPageChanged: (value) {
@@ -75,6 +72,7 @@ class _FirstScreenState extends State<FirstScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('Calorie counter'),
       ),
       body: Center(
