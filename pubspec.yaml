@@ -71,6 +71,18 @@ flutter:
   assets:
     - assets/images/fotka.png
     - assets/images/recipebook.json
+    - assets/recipeses/111.jpeg
+    - assets/recipeses/222.jpeg
+    - assets/recipeses/333.jpeg
+    - assets/recipeses/444.jpeg
+    - assets/recipeses/555.jpeg
+    - assets/recipeses/666.jpeg
+    - assets/recipeses/777.jpeg
+    - assets/recipeses/888.jpeg
+    - assets/recipeses/999.jpeg
+    - assets/recipeses/1010.jpeg
+    - assets/recipeses/8888.jpeg
+    - assets/recipeses/111111.jpeg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

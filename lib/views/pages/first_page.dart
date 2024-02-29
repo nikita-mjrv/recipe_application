@@ -66,14 +66,26 @@ class FirstScreen extends StatefulWidget {
 
 class _FirstScreenState extends State<FirstScreen> {
   double caloriesConsumed = 0.0;
-  double dailyCaloriesGoal = 2000.0; // Лимит калорий в день
+  double dailyCaloriesGoal = 2000.0;
+  TextEditingController _caloriesConsumedController = TextEditingController();
+  TextEditingController _dailyCaloriesGoalController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text('Calorie counter'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.calculate_sharp),
+            SizedBox(width: 10),
+            Text(
+              'Calorie counter',
+              style: TextStyle(fontWeight: FontWeight.w700),
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: Column(
@@ -105,6 +117,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   width: 150.0,
                   child: TextField(
                     keyboardType: TextInputType.number,
+                    controller: _caloriesConsumedController,
                     decoration: InputDecoration(
                       hintText: 'Calories',
                       border: OutlineInputBorder(),
@@ -121,9 +134,38 @@ class _FirstScreenState extends State<FirstScreen> {
                   onPressed: () {
                     setState(() {
                       caloriesConsumed = 0.0;
+                      _caloriesConsumedController.clear();
                     });
                   },
                   child: Text('Reset'),
+                ),
+              ],
+            ),
+            SizedBox(height: 20.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 150.0,
+                  child: TextField(
+                    keyboardType: TextInputType.number,
+                    controller: _dailyCaloriesGoalController,
+                    decoration: InputDecoration(
+                      hintText: 'Daily Calories',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10.0),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      dailyCaloriesGoal =
+                          double.tryParse(_dailyCaloriesGoalController.text) ??
+                              dailyCaloriesGoal;
+                    });
+                  },
+                  child: Text('Set'),
                 ),
               ],
             ),

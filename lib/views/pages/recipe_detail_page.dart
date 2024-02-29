@@ -5,14 +5,14 @@ class RecipeDetailPage extends StatelessWidget {
   final String description;
   final String ingredients;
   final String instructions;
-  final String thumbnailUrl;
+  final String thumbnailAsset;
 
   const RecipeDetailPage({
     required this.title,
     required this.description,
     required this.ingredients,
     required this.instructions,
-    required this.thumbnailUrl,
+    required this.thumbnailAsset,
   });
 
   @override
@@ -26,8 +26,8 @@ class RecipeDetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-              thumbnailUrl,
+            Image.asset(
+              thumbnailAsset,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
             ),

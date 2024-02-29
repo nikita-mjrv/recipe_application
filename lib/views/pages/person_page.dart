@@ -6,9 +6,16 @@ class PersonPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(
-          'Welcome!',
-          style: TextStyle(fontWeight: FontWeight.w700),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.person),
+            SizedBox(width: 10),
+            Text(
+              'Your Account',
+              style: TextStyle(fontWeight: FontWeight.w700),
+            ),
+          ],
         ),
       ),
       body: Center(

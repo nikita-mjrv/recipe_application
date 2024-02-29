@@ -4,12 +4,12 @@ class RecipeCard extends StatelessWidget {
   final String title;
   final String rating;
   final String cookTime;
-  final String thumbnailUrl;
+  final String thumbnailAsset;
   final VoidCallback? onPressed;
   RecipeCard({
     required this.title,
     required this.cookTime,
-    required this.thumbnailUrl,
+    required this.thumbnailAsset,
     required this.rating,
     this.onPressed,
   });
@@ -37,7 +37,7 @@ class RecipeCard extends StatelessWidget {
               Colors.black.withOpacity(0.35),
               BlendMode.multiply,
             ),
-            image: NetworkImage(thumbnailUrl),
+            image: AssetImage(thumbnailAsset),
             fit: BoxFit.cover,
           ),
         ),
