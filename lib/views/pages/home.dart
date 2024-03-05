@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipe_application/views/widgets/recipe_card.dart';
 import 'package:recipe_application/views/pages/recipe_detail_page.dart';
 
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();

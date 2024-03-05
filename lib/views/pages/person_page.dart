@@ -21,9 +21,9 @@ class PersonPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Container(
-              width: 300,
-              height: 300,
+            SizedBox.square(
+              dimension: 300,
+
               child: Center(
                 child: Text(
                   'In developing!',

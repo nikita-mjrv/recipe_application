@@ -4,6 +4,8 @@ import 'package:recipe_application/views/pages/home.dart';
 import 'package:recipe_application/views/pages/person_page.dart';
 
 class FirstPage extends StatefulWidget {
+  const FirstPage({super.key});
+
   @override
   State<FirstPage> createState() => _FirstPageState();
 }
@@ -17,11 +19,11 @@ class _FirstPageState extends State<FirstPage> {
     return Scaffold(
       body: PageView(
         controller: _pageController,
-        onPageChanged: (value) {
+        onPageChanged: (value) =>
           setState(
-            () => _selectedPageIndex = value,
-          );
-        },
+            () => _selectedPageIndex = value
+          )
+        ,
         children: [
           FirstScreen(),
           HomePage(),

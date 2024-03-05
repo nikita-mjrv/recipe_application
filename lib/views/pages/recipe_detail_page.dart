@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class RecipeDetailPage extends StatelessWidget {
-  final String title;
-  final String description;
-  final String ingredients;
-  final String instructions;
-  final String thumbnailAsset;
-
-  const RecipeDetailPage({
+  const RecipeDetailPage({super.key, 
     required this.title,
     required this.description,
     required this.ingredients,
     required this.instructions,
     required this.thumbnailAsset,
   });
+
+  final String title;
+  final String description;
+  final String ingredients;
+  final String instructions;
+  final String thumbnailAsset;
+
+
 
   @override
   Widget build(BuildContext context) {
